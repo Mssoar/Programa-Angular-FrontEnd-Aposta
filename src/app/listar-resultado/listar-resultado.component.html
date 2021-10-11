@@ -1,0 +1,23 @@
+<div class="container"> 
+    <h1 class="Display-4 text-center">Listar Resultado</h1>
+    <a class="btn btn-primary listarresultado" href="incluirresultado/">Incluir Resultado</a>    
+    <table class="table">    
+            <thead>
+                <th scope="col">IdResultado</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Vencedor</th> 
+                <th scope="col">IdJogo</th>
+                <th scope="col">IdClube</th>
+                <th></th>          
+            </thead>    
+            <tbody>
+                <tr *ngFor="let resultado of resultados">
+                    <th scope="row">{{resultado.idResultado}}</th>
+                    <td>{{resultado.vencedor}}</td>
+                    <td>{{resultado.idJogo}}</td>
+                    <td>{{resultado.idClube}}</td>       
+                    <td><a class="btn btn-primary" href="alterarresultado/{{resultado.idResultado}}">Alterar</a></td>                                
+                </tr>
+            </tbody>
+    </table>
+    </div>

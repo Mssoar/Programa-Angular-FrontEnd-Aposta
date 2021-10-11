@@ -1,0 +1,12 @@
+<h1 class="display-4 text-center">Incluir Estadio</h1>
+
+<div class="container">
+    <form method="POST" #frm="ngForm" (ngSubmit)="incluir(frm)">
+        <div class="form-group">
+            <label for="Nome">Nome</label>
+            <input type="text" name="nome" id="nome" class="form-control" placeholder="Nome"
+                [(ngModel)]="estadio.nome" required />
+        </div>          
+        <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+</div>

@@ -1,0 +1,28 @@
+<div class="container">
+    <h1 class="display-4 text-center">Lista de Apostas</h1>
+    <a class="btn btn-primary incluiraposta" href="incluiraposta/">Incluir Apostas</a>
+    <table class="table">
+        <thead class="thead-light">
+            <tr>
+                <th>#</th>
+                <th>idCliente</th>
+                <th>idJogo</th>
+                <th>Valor</th>
+                <th>pago</th>
+                <th>dataCompra</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let aposta of apostas">
+                <td>{{ aposta.idAposta }}</td>     
+                <td>{{ aposta.idCliente }}</td>
+                <td>{{ aposta.idJogo }}</td>
+                <td>R${{ aposta.valor | number: '.2'}}</td>
+                <td>{{ aposta.pago }}</td>
+                <td>{{ aposta.dataCompra | date:'dd/MM/yyyy':'GMT-00:00'}}</td>
+                <td><a class="btn btn-primary" href="alteraraposta/{{aposta.idAposta}}">Alterar</a></td>
+            </tr>
+        </tbody>
+    </table>
+    </div>

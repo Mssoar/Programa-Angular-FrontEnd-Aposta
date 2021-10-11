@@ -1,0 +1,39 @@
+<h1 class="display-4 text-center">Alterar Resultado</h1>
+
+<div class="container">
+    <form method="POST" #frm="ngForm" (ngSubmit)="alterar(frm)">
+        <div class="form-group">
+            <label for="Nome">Nome</label>
+            <input type="text" name="Nome" id="Nome" class="form-control" placeholder="NOME"
+                [(ngModel)]="resultado.nome" required/>
+        </div>
+
+        <div class="form-check">            
+            <input type="checkbox" name="Vencedor" id="Vencedor" class="form-check-input" placeholder="VENCEDOR"
+                [(ngModel)]="resultado.vencedor" required />
+            <label class="form-check-label" for="Vencedor">Vencedor</label>
+        </div>       
+       
+        <div class="form-group">
+            <label for="IdJogo">Jogo</label>
+            <select name="IdJogo" id="IdJogo" class="form-select" placeholder="IDJOGO"
+            [(ngModel)]="resultado.idJogo" required>
+        
+                <option *ngFor="let jogo of jogos" value="{{jogo.idJogo}}">{{ jogo.nome }}</option>
+        
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="IdClube">Clube</label>
+            <select name="IdClube" id="IdClube" class="form-select" placeholder="IDCLUBE"
+            [(ngModel)]="resultado.idClube" required>
+        
+                <option *ngFor="let clube of clubes" value="{{clube.idClube}}">{{ clube.nome }}</option>
+        
+            </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary mt-2">Enviar</button>
+    </form>
+</div>

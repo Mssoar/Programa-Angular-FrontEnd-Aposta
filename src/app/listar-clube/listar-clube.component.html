@@ -1,0 +1,25 @@
+
+<div class="container">
+    <h1 class="display-4 text-center">Lista de Clubes</h1>
+    <a class="btn btn-primary listarclube" href="incluirclube">Incluir Clube</a>
+<table class="table">
+    <thead class="thead-light">
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Telefone</th>
+            <th scope="col">Email</th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let clube of clubes">
+            <th scope="row">{{ clube.idClube }}</th>
+            <td>{{ clube.nome }}</td>
+            <td>{{ clube.telefone }}</td>
+            <td>{{ clube.email }}</td>
+            <td><a class="btn btn-primary" href="alterarclube/{{clube.idClube}}"> alterar</a></td>
+        </tr>        
+    </tbody>
+</table>
+</div>

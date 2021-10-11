@@ -1,0 +1,29 @@
+<h1 class="dysplay-4 text-center">Incluir Clube</h1>
+
+<div class = "container">
+     
+    <form method="POST" #frm="ngForm" (ngSubmit)="incluir(frm)">
+                  <div class="form-group">
+    
+                    <label for="nome">Nome do Clube:</label>
+                    <input type="text" name="nome" id = "nome" class="form-control" placeholder="Nome" [(ngModel)]="clube.nome" required/>
+    
+                </div>
+    
+                <div class="form-group">
+    
+                    <label for="telefone">Telefone do Clube:</label>
+                    <input type="text" name="telefone" id = "telefone" class="form-control" placeholder="Telefone" [(ngModel)]="clube.telefone" required/>
+    
+                </div>
+    
+                <div class="form-group">
+    
+                    <label for="email">Email do Clube:</label>
+                    <input type="text" name="email" id = "email" class="form-control" placeholder="Email" [(ngModel)]="clube.email" required/>
+    
+                </div>
+                <button id="botaoEnviar" type="submit" class="btn btn-primary">Enviar</button>
+    
+    </form>
+</div>

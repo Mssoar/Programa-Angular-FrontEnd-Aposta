@@ -1,0 +1,45 @@
+<h1 class="display-4 text-center">Alterar Jogo</h1>
+
+
+<div class="container">
+    <form method="POST" #frm="ngForm" (ngSubmit)="alterar(frm)">
+        <div class="form-group">
+            <label for="Nome">Nome</label>
+            <input type="text" name="nome" id="nome" class="form-control" placeholder="Nome"
+                [(ngModel)]="jogo.nome" required />
+        </div>
+
+        <div class="form-group">
+            <label for="idCasa">Clube da Casa</label>
+            <select name="idCasa" id="idCasa" class="form-select" placeholder="Id do Clube da casa"
+            [(ngModel)]="jogo.idCasa" required>
+        
+                <option *ngFor="let clube of clubes" value="{{clube.idClube}}">{{ clube.nome }}</option>
+        
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="idVisitante">Clube Visitante</label>
+            <select name="idVisitante" id="idVisitante" class="form-select" placeholder="Id do Clube Visitante"
+            [(ngModel)]="jogo.idVisitante" required>
+        
+                <option *ngFor="let clube of clubes" value="{{clube.idClube}}">{{ clube.nome }}</option>
+        
+            </select>
+        </div>
+
+        <div class="form-group">
+        <label for="idEstadio">Estadio</label>
+        <select name="idEstadio" id="idEstadio" class ="form-select" placeholder="Id do Clube Estadio" 
+        [(ngModel)] = "jogo.idEstadio">
+
+            <option *ngFor="let estadio of estadios" value="{{estadio.idEstadio}}">{{estadio.nome}}</option>
+
+        </select>
+
+        </div>
+       
+        <button type="submit" class="btn btn-primary">Enviar</button>
+
+    </form>
+</div>

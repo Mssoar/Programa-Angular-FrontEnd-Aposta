@@ -1,0 +1,18 @@
+<div class="container"> 
+    <h1 class="Display-4 text-center">Listar Estadios</h1>
+    <a class="btn btn-primary incluirestadio" href="incluirestadio/">Incluir Estadio</a>    
+    <table class="table">    
+            <thead>
+                <th scope="col">#</th>
+                <th scope="col">Nome</th>
+                <th></th>          
+            </thead>    
+            <tbody>
+                <tr *ngFor="let estadio of estadios">
+                    <th scope="row">{{estadio.idEstadio}}</th>
+                    <td>{{estadio.nome}}</td>   
+                    <td><a class="btn btn-primary" href="alterarestadio/{{estadio.idEstadio}}">Alterar</a></td>                                
+                </tr>
+            </tbody>
+    </table>
+    </div>

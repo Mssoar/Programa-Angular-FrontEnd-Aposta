@@ -1,0 +1,20 @@
+<div class="container"> 
+    <h1 class="Display-4 text-center">Listar Cliente</h1>
+    <a class="btn btn-primary listarcliente" href="incluircliente/">Incluir Cliente</a>    
+    <table class="table">    
+            <thead>
+                <th scope="col">#</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Email</th> 
+                <th></th>          
+            </thead>    
+            <tbody>
+                <tr *ngFor="let cliente of clientes">
+                    <th scope="row">{{cliente.idCliente}}</th>
+                    <td>{{cliente.nome}}</td>
+                    <td>{{cliente.email}}</td>     
+                    <td><a class="btn btn-primary" href="alterarcliente/{{cliente.idCliente}}">Alterar</a></td>                                
+                </tr>
+            </tbody>
+    </table>
+    </div>

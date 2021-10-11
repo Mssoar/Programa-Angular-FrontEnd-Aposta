@@ -1,0 +1,24 @@
+<div class="container">
+<h1 class="Display-4 text-center">Listar Jogos</h1>
+<a class="btn btn-primary incluirjogo" href="incluirjogo/">Incluir Jogo</a>
+<table class="table">    
+        <thead>
+            <th scope="col">#</th>
+            <th scope="col">Nome</th>
+            <th scope="col">IdCasa</th>
+            <th scope="col">IdVisitante</th>
+            <th scope="col">IdEstadio</th>
+            <th></th>
+        </thead>    
+        <tbody>
+            <tr *ngFor="let Jogo of jogos">
+            <th scope="row">{{Jogo.idJogo}}</th>
+            <td>{{Jogo.nome}}</td>
+            <td>{{Jogo.idCasa}}</td>
+            <td>{{Jogo.idVisitante}}</td>
+            <td>{{Jogo.idEstadio}}</td>            
+            <td><a class="btn btn-primary" href="alterarjogo/{{Jogo.idJogo}}">Alterar</a></td>
+        </tr>
+        </tbody>
+</table>
+</div>

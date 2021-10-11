@@ -1,0 +1,30 @@
+<h1 class="dysplay-4 text-center">Alterar Clube</h1>
+
+<div class = "container">
+     
+    <form method="POST" #frm="ngForm" (ngSubmit)="alterar(frm)">
+                  <div class="form-group">
+    
+                    <label for="nome">Nome do Clube:</label>
+                    <input type="text" name="nome" id = "nome" class="form-control" placeholder="Nome" [(ngModel)]="clube.nome" required
+                    [(ngModel)]="clube.nome" required value="{{clube.nome}}"/>
+    
+                </div>
+    
+                <div class="form-group">
+    
+                    <label for="telefone">Telefone do Clube:</label>
+                    <input type="text" name="telefone" id = "telefone" class="form-control" placeholder="Telefone" [(ngModel)]="clube.telefone" required
+                    [(ngModel)]="clube.telefone" required value="{{clube.telefone}}"/>
+                </div>
+    
+                <div class="form-group">
+    
+                    <label for="email">Email do Clube:</label>
+                    <input type="text" name="email" id = "email" class="form-control" placeholder="Email" [(ngModel)]="clube.email" required
+                    [(ngModel)]="clube.email" required value="{{clube.email}}"/>
+                </div>
+                <button id="botaoEnviar" type="submit" class="btn btn-primary">Enviar</button>
+                
+    
+    </form>
